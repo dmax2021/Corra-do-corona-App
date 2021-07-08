@@ -1,4 +1,4 @@
-import '../conta/conta_widget.dart';
+import '../contausuario/contausuario_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -86,6 +86,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         color: Colors.white,
                         fontSize: 18,
                       ),
+                      keyboardType: TextInputType.emailAddress,
                       validator: (val) {
                         if (val.isEmpty) {
                           return 'Field is required';
@@ -172,7 +173,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               await Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => ContaWidget(),
+                                  builder: (context) => ContausuarioWidget(),
                                 ),
                               );
                             },

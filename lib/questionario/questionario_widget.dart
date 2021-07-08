@@ -1,26 +1,26 @@
+import '../contausuario/contausuario_widget.dart';
+import '../endereco/endereco_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../mensagemcadastrocorreto/mensagemcadastrocorreto_widget.dart';
-import '../termosecondicoes/termosecondicoes_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
-class CadastrarcontaWidget extends StatefulWidget {
-  CadastrarcontaWidget({Key key}) : super(key: key);
+class QuestionarioWidget extends StatefulWidget {
+  QuestionarioWidget({Key key}) : super(key: key);
 
   @override
-  _CadastrarcontaWidgetState createState() => _CadastrarcontaWidgetState();
+  _QuestionarioWidgetState createState() => _QuestionarioWidgetState();
 }
 
-class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
+class _QuestionarioWidgetState extends State<QuestionarioWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
-  bool passwordVisibility1;
   TextEditingController textController4;
-  bool passwordVisibility2;
+  TextEditingController textController5;
+  TextEditingController textController6;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -29,9 +29,9 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
     textController1 = TextEditingController();
     textController2 = TextEditingController();
     textController3 = TextEditingController();
-    passwordVisibility1 = false;
     textController4 = TextEditingController();
-    passwordVisibility2 = false;
+    textController5 = TextEditingController();
+    textController6 = TextEditingController();
   }
 
   @override
@@ -66,7 +66,7 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                   child: Image.asset(
                                     'assets/images/',
                                     width: MediaQuery.of(context).size.width,
-                                    height: 100,
+                                    height: 50,
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -99,7 +99,7 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                             child: Text(
-                              'Crie sua conta!',
+                              'Responda o questionário',
                               style: FlutterFlowTheme.title3.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -136,13 +136,43 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(24, 12, 0, 12),
-                        child: Text(
-                          'Cadastrar novo usuário.',
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
+                          child: TextFormField(
+                            controller: textController1,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              hintText:
+                                  'A quanto tempo reside na atual residência?',
+                              hintStyle: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFF111111),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFF111111),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                            ),
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                            ),
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       )
@@ -176,10 +206,10 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
                                   child: TextFormField(
-                                    controller: textController1,
+                                    controller: textController2,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Nome completo *',
+                                      hintText: 'Idade?',
                                       hintStyle:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
@@ -208,7 +238,7 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
-                                    keyboardType: TextInputType.name,
+                                    keyboardType: TextInputType.number,
                                   ),
                                 ),
                               )
@@ -237,10 +267,11 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
                                   child: TextFormField(
-                                    controller: textController2,
+                                    controller: textController3,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'E-mail *',
+                                      hintText:
+                                          'Data que confirmou positivo para Covid19?',
                                       hintStyle:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
@@ -269,80 +300,7 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
-                                    keyboardType: TextInputType.emailAddress,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                                  child: TextFormField(
-                                    controller: textController3,
-                                    obscureText: !passwordVisibility1,
-                                    decoration: InputDecoration(
-                                      hintText: 'Criar senha',
-                                      hintStyle:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                      ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      suffixIcon: InkWell(
-                                        onTap: () => setState(
-                                          () => passwordVisibility1 =
-                                              !passwordVisibility1,
-                                        ),
-                                        child: Icon(
-                                          passwordVisibility1
-                                              ? Icons.visibility_outlined
-                                              : Icons.visibility_off_outlined,
-                                          color: Color(0xFF757575),
-                                          size: 22,
-                                        ),
-                                      ),
-                                    ),
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
-                                    ),
+                                    keyboardType: TextInputType.datetime,
                                   ),
                                 ),
                               )
@@ -372,9 +330,10 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                   padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
                                   child: TextFormField(
                                     controller: textController4,
-                                    obscureText: !passwordVisibility2,
+                                    obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Confirmar senha',
+                                      hintText:
+                                          'Data que tomou a primeira dose da vacina?',
                                       hintStyle:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
@@ -399,23 +358,11 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                           topRight: Radius.circular(4.0),
                                         ),
                                       ),
-                                      suffixIcon: InkWell(
-                                        onTap: () => setState(
-                                          () => passwordVisibility2 =
-                                              !passwordVisibility2,
-                                        ),
-                                        child: Icon(
-                                          passwordVisibility2
-                                              ? Icons.visibility_outlined
-                                              : Icons.visibility_off_outlined,
-                                          color: Color(0xFF757575),
-                                          size: 22,
-                                        ),
-                                      ),
                                     ),
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
+                                    keyboardType: TextInputType.datetime,
                                   ),
                                 ),
                               )
@@ -426,14 +373,127 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(24, 10, 24, 0),
-                    child: Text(
-                      'A senha deve conter no mínimo 6 dígitos;',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Poppins',
-                      ),
+                    padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                  child: TextFormField(
+                                    controller: textController5,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      hintText:
+                                          'Data que tomou a segunda dose da vacina?',
+                                      hintStyle:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF111111),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                      focusedBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF111111),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                    ),
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                    ),
+                                    keyboardType: TextInputType.datetime,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: 100,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Colors.yellow,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                  child: TextFormField(
+                                    controller: textController6,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      hintText:
+                                          'Quantas pessoas moram com você?',
+                                      hintStyle:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF111111),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                      focusedBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF111111),
+                                          width: 1,
+                                        ),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(4.0),
+                                          topRight: Radius.circular(4.0),
+                                        ),
+                                      ),
+                                    ),
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                    ),
+                                    keyboardType: TextInputType.number,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 55, 0, 1),
@@ -446,7 +506,7 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => TermosecondicoesWidget(),
+                                builder: (context) => ContausuarioWidget(),
                               ),
                             );
                           },
@@ -479,11 +539,11 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                                     type: PageTransitionType.fade,
                                     duration: Duration(milliseconds: 0),
                                     reverseDuration: Duration(milliseconds: 0),
-                                    child: MensagemcadastrocorretoWidget(),
+                                    child: EnderecoWidget(),
                                   ),
                                 );
                               },
-                              text: 'Cadastrar',
+                              text: 'Avançar',
                               options: FFButtonOptions(
                                 width: 90,
                                 height: 40,

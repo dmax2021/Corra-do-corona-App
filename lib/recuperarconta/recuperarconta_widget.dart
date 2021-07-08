@@ -202,6 +202,7 @@ class _RecuperarcontaWidgetState extends State<RecuperarcontaWidget> {
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
+                                    keyboardType: TextInputType.name,
                                   ),
                                 ),
                               )
@@ -262,6 +263,7 @@ class _RecuperarcontaWidgetState extends State<RecuperarcontaWidget> {
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
+                                    keyboardType: TextInputType.emailAddress,
                                   ),
                                 ),
                               )
@@ -322,6 +324,7 @@ class _RecuperarcontaWidgetState extends State<RecuperarcontaWidget> {
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Poppins',
                                     ),
+                                    keyboardType: TextInputType.emailAddress,
                                   ),
                                 ),
                               )

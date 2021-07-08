@@ -25,17 +25,11 @@ dependencies:
     sdk: flutter
   auto_size_text:
   cached_network_image: 2.5.1
-  firebase_auth: ^0.20.0+1
-  firebase_core: ^0.7.0
   font_awesome_flutter:
   geolocator:
-  google_fonts:
-  google_sign_in: ^4.0.16
+  google_fonts: ^1.1.2
   intl:
   page_transition:
-  rxdart: ^0.25.0
-  sign_in_with_apple: ^2.5.4
-  smooth_page_indicator:
   timeago:
   url_launcher:
 
@@ -45,9 +39,17 @@ dependencies:
   cupertino_icons: ^1.0.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.8.1
 
   flutter_test:
     sdk: flutter
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/images/Logo_corra_do_corona2.png'
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
