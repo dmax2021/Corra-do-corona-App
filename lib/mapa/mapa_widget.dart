@@ -194,13 +194,6 @@ class _MapaWidgetState extends State<MapaWidget> {
                           color: Colors.yellow,
                           shape: BoxShape.rectangle,
                         ),
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(0, 0, 0, 1),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [],
-                          ),
-                        ),
                       )
                     ],
                   ),
