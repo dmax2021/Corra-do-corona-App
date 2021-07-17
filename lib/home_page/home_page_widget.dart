@@ -1,3 +1,4 @@
+import '../auth/auth_util.dart';
 import '../contausuario/contausuario_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -16,18 +17,18 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  bool passwordVisibility;
+  TextEditingController insertloginController;
+  TextEditingController insertpasswordController;
+  bool insertpasswordVisibility;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    passwordVisibility = false;
+    insertloginController = TextEditingController();
+    insertpasswordController = TextEditingController();
+    insertpasswordVisibility = false;
   }
 
   @override
@@ -51,7 +52,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(40, 1, 40, 2),
                     child: TextFormField(
-                      controller: textController1,
+                      controller: insertloginController,
                       obscureText: false,
                       decoration: InputDecoration(
                         hintText: 'E-mail',
@@ -106,8 +107,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(40, 1, 40, 2),
                           child: TextFormField(
-                            controller: textController2,
-                            obscureText: !passwordVisibility,
+                            controller: insertpasswordController,
+                            obscureText: !insertpasswordVisibility,
                             decoration: InputDecoration(
                               hintText: 'Senha',
                               hintStyle: GoogleFonts.getFont(
@@ -137,11 +138,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
-                                  () =>
-                                      passwordVisibility = !passwordVisibility,
+                                  () => insertpasswordVisibility =
+                                      !insertpasswordVisibility,
                                 ),
                                 child: Icon(
-                                  passwordVisibility
+                                  insertpasswordVisibility
                                       ? Icons.visibility_outlined
                                       : Icons.visibility_off_outlined,
                                   color: Color(0xFFF9F5F5),
@@ -168,32 +169,47 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         alignment: Alignment(0.02, 0.61),
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(3, 0, 0, 0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              await Navigator.push(
+                          child: InkWell(
+                            onDoubleTap: () async {
+                              if (!formKey.currentState.validate()) {
+                                return;
+                              }
+                              final user = await signInWithEmail(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => ContausuarioWidget(),
-                                ),
+                                insertloginController.text,
+                                insertpasswordController.text,
                               );
+                              if (user == null) {
+                                return;
+                              }
                             },
-                            text: 'Entrar',
-                            options: FFButtonOptions(
-                              width: 125,
-                              height: 40,
-                              color: Color(0x00FFFFFF),
-                              textStyle: GoogleFonts.getFont(
-                                'Lato',
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ContausuarioWidget(),
+                                  ),
+                                );
+                              },
+                              text: 'Entrar',
+                              options: FFButtonOptions(
+                                width: 125,
+                                height: 40,
+                                color: Color(0x00FFFFFF),
+                                textStyle: GoogleFonts.getFont(
+                                  'Lato',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                ),
+                                elevation: 111111,
+                                borderSide: BorderSide(
+                                  color: Color(0xFF553BBA),
+                                  width: 2,
+                                ),
+                                borderRadius: 100,
                               ),
-                              elevation: 111111,
-                              borderSide: BorderSide(
-                                color: Color(0xFF553BBA),
-                                width: 2,
-                              ),
-                              borderRadius: 100,
                             ),
                           ),
                         ),

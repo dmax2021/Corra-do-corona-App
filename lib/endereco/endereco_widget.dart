@@ -1,8 +1,8 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../mapa/mapa_widget.dart';
 import '../questionario/questionario_widget.dart';
+import '../teste/teste_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -530,7 +530,7 @@ class _EnderecoWidgetState extends State<EnderecoWidget> {
                                     type: PageTransitionType.fade,
                                     duration: Duration(milliseconds: 0),
                                     reverseDuration: Duration(milliseconds: 0),
-                                    child: MapaWidget(),
+                                    child: TesteWidget(),
                                   ),
                                 );
                               },

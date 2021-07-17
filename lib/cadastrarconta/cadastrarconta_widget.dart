@@ -1,3 +1,5 @@
+import '../auth/auth_util.dart';
+import '../contausuario/contausuario_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -15,23 +17,23 @@ class CadastrarcontaWidget extends StatefulWidget {
 }
 
 class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  TextEditingController textController3;
-  bool passwordVisibility1;
-  TextEditingController textController4;
+  TextEditingController confirmPasswordTextController;
   bool passwordVisibility2;
+  TextEditingController emailTextController;
+  TextEditingController textController1;
+  TextEditingController passwordTextController;
+  bool passwordVisibility1;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    textController3 = TextEditingController();
-    passwordVisibility1 = false;
-    textController4 = TextEditingController();
+    confirmPasswordTextController = TextEditingController();
     passwordVisibility2 = false;
+    emailTextController = TextEditingController();
+    textController1 = TextEditingController();
+    passwordTextController = TextEditingController();
+    passwordVisibility1 = false;
   }
 
   @override
@@ -169,50 +171,73 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                         ),
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(0, 0, 0, 1),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                                  child: TextFormField(
-                                    controller: textController1,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      hintText: 'Nome completo *',
-                                      hintStyle:
+                          child: InkWell(
+                            onTap: () async {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: Text('Informar nome'),
+                                    content:
+                                        Text('Por favor, informe seu nome '),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                    child: TextFormField(
+                                      controller: textController1,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        hintText: 'Nome completo *',
+                                        hintStyle:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                        ),
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                      ),
+                                      style:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
                                       ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
+                                      keyboardType: TextInputType.name,
                                     ),
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
-                                    ),
-                                    keyboardType: TextInputType.name,
                                   ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       )
@@ -230,50 +255,101 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                             color: Colors.yellow,
                             shape: BoxShape.rectangle,
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                                  child: TextFormField(
-                                    controller: textController2,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      hintText: 'E-mail *',
-                                      hintStyle:
+                          child: InkWell(
+                            onTap: () async {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: Text('Informar E-mail'),
+                                    content:
+                                        Text('Por favor, informe seu e-mail'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                              if (passwordTextController.text !=
+                                  confirmPasswordTextController.text) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      "Passwords don't match!",
+                                    ),
+                                  ),
+                                );
+                                return;
+                              }
+
+                              final user = await createAccountWithEmail(
+                                context,
+                                emailTextController.text,
+                                passwordTextController.text,
+                              );
+                              if (user == null) {
+                                return;
+                              }
+
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ContausuarioWidget(),
+                                ),
+                                (r) => false,
+                              );
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                    child: TextFormField(
+                                      controller: emailTextController,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        hintText: 'E-mail *',
+                                        hintStyle:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                        ),
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                      ),
+                                      style:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
                                       ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
+                                      keyboardType: TextInputType.emailAddress,
                                     ),
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
-                                    ),
-                                    keyboardType: TextInputType.emailAddress,
                                   ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
@@ -291,62 +367,85 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                             color: Colors.yellow,
                             shape: BoxShape.rectangle,
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                                  child: TextFormField(
-                                    controller: textController3,
-                                    obscureText: !passwordVisibility1,
-                                    decoration: InputDecoration(
-                                      hintText: 'Criar senha',
-                                      hintStyle:
+                          child: InkWell(
+                            onTap: () async {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: Text('Criar senha'),
+                                    content:
+                                        Text('Por favor, insira sua senha'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                    child: TextFormField(
+                                      controller: passwordTextController,
+                                      obscureText: !passwordVisibility1,
+                                      decoration: InputDecoration(
+                                        hintText: 'Criar senha',
+                                        hintStyle:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                        ),
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        suffixIcon: InkWell(
+                                          onTap: () => setState(
+                                            () => passwordVisibility1 =
+                                                !passwordVisibility1,
+                                          ),
+                                          child: Icon(
+                                            passwordVisibility1
+                                                ? Icons.visibility_outlined
+                                                : Icons.visibility_off_outlined,
+                                            color: Color(0xFF757575),
+                                            size: 22,
+                                          ),
+                                        ),
+                                      ),
+                                      style:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
                                       ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      suffixIcon: InkWell(
-                                        onTap: () => setState(
-                                          () => passwordVisibility1 =
-                                              !passwordVisibility1,
-                                        ),
-                                        child: Icon(
-                                          passwordVisibility1
-                                              ? Icons.visibility_outlined
-                                              : Icons.visibility_off_outlined,
-                                          color: Color(0xFF757575),
-                                          size: 22,
-                                        ),
-                                      ),
-                                    ),
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
                                     ),
                                   ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
@@ -364,62 +463,85 @@ class _CadastrarcontaWidgetState extends State<CadastrarcontaWidget> {
                             color: Colors.yellow,
                             shape: BoxShape.rectangle,
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                                  child: TextFormField(
-                                    controller: textController4,
-                                    obscureText: !passwordVisibility2,
-                                    decoration: InputDecoration(
-                                      hintText: 'Confirmar senha',
-                                      hintStyle:
+                          child: InkWell(
+                            onTap: () async {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: Text('Confirmar senha'),
+                                    content:
+                                        Text('Por favor, confirme sua senha'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.fromLTRB(24, 12, 24, 12),
+                                    child: TextFormField(
+                                      controller: confirmPasswordTextController,
+                                      obscureText: !passwordVisibility2,
+                                      decoration: InputDecoration(
+                                        hintText: 'Confirmar senha',
+                                        hintStyle:
+                                            FlutterFlowTheme.bodyText1.override(
+                                          fontFamily: 'Poppins',
+                                        ),
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xFF111111),
+                                            width: 1,
+                                          ),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(4.0),
+                                            topRight: Radius.circular(4.0),
+                                          ),
+                                        ),
+                                        suffixIcon: InkWell(
+                                          onTap: () => setState(
+                                            () => passwordVisibility2 =
+                                                !passwordVisibility2,
+                                          ),
+                                          child: Icon(
+                                            passwordVisibility2
+                                                ? Icons.visibility_outlined
+                                                : Icons.visibility_off_outlined,
+                                            color: Color(0xFF757575),
+                                            size: 22,
+                                          ),
+                                        ),
+                                      ),
+                                      style:
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Poppins',
                                       ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF111111),
-                                          width: 1,
-                                        ),
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(4.0),
-                                          topRight: Radius.circular(4.0),
-                                        ),
-                                      ),
-                                      suffixIcon: InkWell(
-                                        onTap: () => setState(
-                                          () => passwordVisibility2 =
-                                              !passwordVisibility2,
-                                        ),
-                                        child: Icon(
-                                          passwordVisibility2
-                                              ? Icons.visibility_outlined
-                                              : Icons.visibility_off_outlined,
-                                          color: Color(0xFF757575),
-                                          size: 22,
-                                        ),
-                                      ),
-                                    ),
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
                                     ),
                                   ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
