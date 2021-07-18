@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TesteWidget extends StatefulWidget {
-  TesteWidget({Key key}) : super(key: key);
+class MapWidget extends StatefulWidget {
+  MapWidget({Key key}) : super(key: key);
 
   @override
-  _TesteWidgetState createState() => _TesteWidgetState();
+  _MapWidgetState createState() => _MapWidgetState();
 }
 
-class _TesteWidgetState extends State<TesteWidget> {
+class _MapWidgetState extends State<MapWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
   final formKey = GlobalKey<FormState>();
@@ -31,6 +31,25 @@ class _TesteWidgetState extends State<TesteWidget> {
       child: Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          backgroundColor: Colors.yellow,
+          automaticallyImplyLeading: true,
+          title: Container(
+            width: 70,
+            height: 70,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            child: Image.asset(
+              'assets/images/Logo_corra_do_corona2.png',
+            ),
+          ),
+          actions: [],
+          centerTitle: true,
+          elevation: 4,
+        ),
+        backgroundColor: Colors.yellow,
         body: SafeArea(
           child: Stack(
             children: [
