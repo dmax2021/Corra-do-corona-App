@@ -47,7 +47,8 @@ class _TesteWidgetState extends State<TesteWidget> {
                             controller: textController1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: 'Insira o destino',
+                              hintText:
+                                  'Por favor, inserir sua localização atual',
                               hintStyle: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -111,7 +112,7 @@ class _TesteWidgetState extends State<TesteWidget> {
                             controller: textController2,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: 'Insira o destino',
+                              hintText: 'Por favor, Inserir o destino desejado',
                               hintStyle: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
