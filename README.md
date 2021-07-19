@@ -38,7 +38,7 @@ poderá reforçar a vigilância quanto aos critérios definidos pela OMS (Organi
 
 ## REPOSITORIO DO APP
 O APP está disponível no seguinte repositório:
-https://github.com/dmax2021/flutter_app.git
+https://github.com/dmax2021/Corra-do-corona-App.git
 
 
 ## AJUDA
