@@ -37,6 +37,8 @@ poderá reforçar a vigilância quanto aos critérios definidos pela OMS (Organi
 O APP está disponível no seguinte repositório:
 https://github.com/dmax2021/flutter_app.git
 
+https://youtu.be/c5C8xxelFNk
+
 ## AJUDA
 Para maiores informações por favor entrar em contato através do endereço de correio eletrônico:
 edsondinhomais@gmail.com
