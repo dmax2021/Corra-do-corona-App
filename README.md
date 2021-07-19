@@ -20,9 +20,12 @@ pessoas que testaram positivo para o covid19 residem.
 ![APP_corra_do_corona](https://user-images.githubusercontent.com/81516919/112786507-c996dc00-902c-11eb-80ec-542e30ccb454.png)
 
 
-##  APP JANELAS
+##  APP JANELAS ver. 1.0
 ![APP_Moc1](https://user-images.githubusercontent.com/81516919/113525786-483fcc00-958d-11eb-9825-5294f1ccf1a8.png)
 ![APP_Moc2](https://user-images.githubusercontent.com/81516919/113525966-4fb3a500-958e-11eb-8864-e2b78094cada.png)
+
+##  APP JANELAS ver. 2.0
+![tela login](https://user-images.githubusercontent.com/81516919/126136951-57b98959-5813-41f4-b02d-6cf6775195e4.JPG)![tela termos e condições](https://user-images.githubusercontent.com/81516919/126137204-f28362ce-488a-47c1-ac3e-6109708420f3.JPG)![Tela cadastro conta](https://user-images.githubusercontent.com/81516919/126136992-e69e44fd-e593-4a95-8640-3423af788930.JPG)![tela recuperar conta](https://user-images.githubusercontent.com/81516919/126137515-eaaf7625-4713-4356-95c3-75e1c8c445f1.JPG)![Tela questionario epdemologico](https://user-images.githubusercontent.com/81516919/126137607-04ad5ce3-d58a-4b74-8dc7-1888b71bc3c9.JPG)![Tela formulario endereço](https://user-images.githubusercontent.com/81516919/126137646-33bde4a2-9d76-45b8-8d35-e5dc690e69ce.JPG)![Tela mapa](https://user-images.githubusercontent.com/81516919/126137685-c1381e89-16f3-4898-86af-9ce56404a4b4.JPG)![Tela mensagem cadastro sucesso](https://user-images.githubusercontent.com/81516919/126137711-823c19ef-5b77-4d71-b066-db83570f8a46.JPG)![Tela mensagem recuperação sucesso](https://user-images.githubusercontent.com/81516919/126137772-35b7b32c-b199-41e4-bbea-ebac974f2739.JPG)![Tela mensagem cadastro erro](https://user-images.githubusercontent.com/81516919/126137785-b15b5231-7a80-451c-8491-300a1ba9c561.JPG)
 
 ## COMO FUNCIONA O APP
 Para que estas rotas sejam estabelecidas, as pessoas que testarem positivo para o
@@ -41,9 +44,11 @@ poderá reforçar a vigilância quanto aos critérios definidos pela OMS (Organi
 
 ## REPOSITORIO DO APP
 O APP está disponível no seguinte repositório:
+
 https://github.com/dmax2021/Corra-do-corona-App.git
 
 
 ## AJUDA
 Para maiores informações por favor entrar em contato através do endereço de correio eletrônico:
+
 edsondinhomais@gmail.com
