@@ -10,6 +10,9 @@ Este aplicativo de utilidade pública tem o objetivo de informar a população q
 as rotas mais seguras com base na ausência ou menor incidencia de locais onde
 pessoas que testaram positivo para o covid19 residem.
 
+## MVP CORRA DO CORONA
+(https://youtu.be/c5C8xxelFNk)  
+
 ## FLUXOGRAMA APP
 ![APP_corra_do_corona](https://user-images.githubusercontent.com/81516919/112786507-c996dc00-902c-11eb-80ec-542e30ccb454.png)
 
@@ -37,7 +40,6 @@ poderá reforçar a vigilância quanto aos critérios definidos pela OMS (Organi
 O APP está disponível no seguinte repositório:
 https://github.com/dmax2021/flutter_app.git
 
-https://youtu.be/c5C8xxelFNk
 
 ## AJUDA
 Para maiores informações por favor entrar em contato através do endereço de correio eletrônico:
