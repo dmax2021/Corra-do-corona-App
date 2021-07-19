@@ -37,10 +37,18 @@ pessoa saúdavel entre a origem e o destino terá um nível a mais de segurança
 a apróximação de trechos mais críticos serão préviamente notificados e esta informação
 poderá reforçar a vigilância quanto aos critérios definidos pela OMS (Organização Mundial de Saúde).
 
+## FLUXO DE USABILIDADE E NAVEGAÇÃO NO APP
+![Navegação](https://user-images.githubusercontent.com/81516919/126157103-ab680580-b9e6-45be-b3e2-b2fe849b6dbc.png)
+
+
 ## QUAIS OS COMPONENTES DO APP
-- Painel de login e senha
-- Painel de cadastro de informações
-- Painel de mapas
+- Painel de login e senha;
+- Painel de cadastro de conta de usuário;
+- Paineu de termos de uso do app;
+- Painel de recuperação de conta de usuário;
+- Painel do usuário;
+- Painel de cadastro de endereço;
+- Painel de mapa;
 
 ## REPOSITORIO DO APP
 O APP está disponível no seguinte repositório:
