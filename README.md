@@ -13,6 +13,9 @@ pessoas que testaram positivo para o covid19 residem.
 ## MVP CORRA DO CORONA
 (https://youtu.be/c5C8xxelFNk)  
 
+## WEB SITE COMERCIAL CORRA DO CORONA APP
+(https://corradocorona.com/)
+
 ## FLUXOGRAMA APP
 ![APP_corra_do_corona](https://user-images.githubusercontent.com/81516919/112786507-c996dc00-902c-11eb-80ec-542e30ccb454.png)
 
