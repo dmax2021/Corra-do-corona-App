@@ -57,6 +57,7 @@ https://github.com/dmax2021/Corra-do-corona-App.git
 
 
 ## AJUDA
-Para maiores informações por favor entrar em contato através do endereço de correio eletrônico:
-
-edsondinhomais@gmail.com
+Para maiores informações:
+- Acesse o portal https://corradocorona.com/
+- Assista ao vídeo https://www.youtube.com/watch?v=c5C8xxelFNk
+- Ou entre em contato através do endereço de correio eletrônico: edsondinhomais@gmail.com
