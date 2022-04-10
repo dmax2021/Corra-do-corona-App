@@ -55,7 +55,7 @@ O APP está disponível no seguinte repositório:
 
 https://github.com/dmax2021/Corra-do-corona-App.git
 
-# FERRAMENTAS UTILIZADAS NA DOCUMENTAÇÂO E CONSTRUÇÃO DO APP
+## FERRAMENTAS UTILIZADAS NA DOCUMENTAÇÂO E CONSTRUÇÃO DO APP
 
 - Criar Fluxograma:
 https://app.diagrams.net/
