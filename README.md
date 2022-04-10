@@ -55,6 +55,42 @@ O APP está disponível no seguinte repositório:
 
 https://github.com/dmax2021/Corra-do-corona-App.git
 
+## FERRAMENTAS UTILIZADAS NA DOCUMENTAÇÂO E CONSTRUÇÃO DO APP
+
+- Criar Fluxograma:
+https://app.diagrams.net/
+O Diagrams.net é uma aplicação WEB gratuita , utilizada para a criação de diversas artes. O diferencial desta aplicação são os modelos pré-definidos voltados para as áreas de negócios, projetos, e entre outros nichos voltados a organização e administração de recursos;
+
+- Criar Logomarca:
+https://www.canva.com/
+O Canva é uma aplicação WEB utilizada para criação de  logomarcas, cartões de visitas e entre outras artes. A grande diferença desta aplicação são os modelos e temas pré-definidos disponibilizados na sua versão gratuita que auxiliam na criação de logos excepcionais.
+
+- Criar Figuras:
+https://docs.google.com/drawings
+O Drawings é uma aplicação WEB da suíte Google, gratuita, que permite criar diversas artes com qualidade de resolução excelentes para publicações e artigos;
+
+- Criar protótipos das telas:
+https://wireframepro.mockflow.com/
+O Wireframepro é uma aplicação WEB utilizada para ideação e prototipação de diversos nichos, entre eles os APPs. Sua versão gratuita é robusta e permite diagramar janelas através de Widgets  modulares o que favorece a criatividade e dispensa o conhecimentos aprofundados de design;
+
+- Criar Vídeo:
+https://obsproject.com/pt-br/download
+O OBS Studio é uma ferramenta open source muito utilizada no ramo acadêmico para a criação e edição de vídeos;
+
+- Publicar Vídeo:
+https://www.youtube.com/
+O youtube já é bastante difundido na publicação de vídeos na internet. Entretanto é interessante não listar vídeos para publicar trabalhos específicos;
+
+- Criar APP:
+https://flutterflow.io/?gclid=CjwKCAjw9LSSBhBsEiwAKtf0n6hU40Dw1eUwawRhgzFuv5lNWy9bvlA8Wj6K72eW4ojOHkjDWBjU_xoCs9wQAvD_BwE
+O Flutter Flow é uma aplicação modular para criação de App. Esta aplicação possui diversas integrações, tais com o Github, Google Play Story, Analytics e entre outras. O uso do plano básico custa em média $ 15,00 Dólares mês;
+
+- Criar site comercial:
+https://www.hostgator.com.br/
+Na nuvem do Hostgator ao adquirir um domínio o usuário pode utilizar aplicações como o Wordpress que possui temas pré-definidos e plug-ins  que facilitam a construção modularizada de sites comerciais sem a necessidade de conhecimentos aprofundados no âmbito do desenvolvimento. A média de valor do plano mais básico mês custa em torno de R$ 27,00.Versinamento;
+
+- Publicar APP:
+https://github.com/ 
 
 ## AJUDA
 Para maiores informações:
